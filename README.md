@@ -2,7 +2,7 @@
 
 We have relased the code of Adaptive Spatial Pattern Capsule Network (ASPCNet) algorithm, And the paper has been submitted to *NEUROCOMPUTING*. 
 
-However, part of code in *util.py* involves internal projects, so it has not been published. If necessary, please contact us. e-mail: wangjp29@mail2.sysu.edu.cn
+However, part of code in *util.py* involves internal projects, so it has not been published. If necessary, please contact us. e-mail: jinping_wang@foxmail.com or wangjp29@mail2.sysu.edu.cn
 
 This project has been verified in 
 
