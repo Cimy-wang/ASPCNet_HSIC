@@ -43,8 +43,8 @@ If you want to run this code on the other datasets, please directly replace the 
         --> ****.mat
      --> img
         --> result
-     --> ASP_layer.py
-     --> ASPcaps_layer.py
+     --> ASP.py
+     --> ASPCaps.py
      --> batchdot.py
      --> main_ASPCnet.py
      --> util.py
