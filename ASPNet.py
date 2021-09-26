@@ -20,10 +20,10 @@ from util import createPatches, report, random_sample, applyPCA
 def creat_model_aspcaps(x_train, num_classes):
     img_rows, img_cols, num_dim = x_train.shape[1], x_train.shape[2], x_train.shape[3]
     input_layer = Input((img_rows, img_cols, num_dim))
-    layer_01 = ASP(filters=128, kernel_size = args.KS, dilation = args.DR_1, stride = 1)(input_layer)
-    layer_02 = Conv2D(filters=128, kernel_size=(1, 1), strides = (2, 2), activation='relu', padding='same')(layer_01)
-    layer_03 = ASP(filters=256, kernel_size = args.KS, dilation = args.DR_1, stride = 1)(layer_02)
-    layer_04 = Conv2D(filters=256, kernel_size=(1, 1), strides = (2, 2), activation='relu', padding='same')(layer_03)
+    layer_01 = ASP(filters=128, kernel_size=args.KS, dilation=args.DR_1, stride=1)(input_layer)
+    layer_02 = Conv2D(filters=128, kernel_size=(1, 1), strides=(2, 2), activation='relu', padding='same')(layer_01)
+    layer_03 = ASP(filters=256, kernel_size=args.KS, dilation=args.DR_1, stride=1)(layer_02)
+    layer_04 = Conv2D(filters=256, kernel_size=(1, 1), strides=(2, 2), activation='relu', padding='same')(layer_03)
     layer_05 = BatchNormalization(momentum=args.momentum)(layer_04)
     layer_06 = ConvertToCaps()(layer_05)
     layer_07 = ASPCaps(32, 4, kernel_size=(args.KS, args.KS), strides=(1, 1), dilation_rate=(args.DR_1, args.DR_1))(layer_06)
@@ -69,7 +69,7 @@ data, pca = applyPCA(data1, numComponents=args.N_C)
 
 patchesData, patchesLabels = createPatches(data, labels, windowSize=args.WindowsSize)
 patchesLabels = patchesLabels.astype(np.int32)
-train_sample = (40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40)
+train_sample = [40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40]
 validate_sample = [8, 8, 4, 8, 8, 4, 8, 8, 8, 8, 8, 8, 4, 4, 4]
 
 trainIndex, valIndex, testIndex = random_sample(train_sample, validate_sample, patchesLabels)
