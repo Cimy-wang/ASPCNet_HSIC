@@ -1,3 +1,8 @@
+"""
+__author__ = 'Cimy Wang'
+__mtime__  = '2021/9/26'
+If necessary, please contact us. e-mail: jinping_wang@foxmail.com
+"""
 import tensorflow as tf
 import keras.layers as KL
 
@@ -48,7 +53,7 @@ class ASP(KL.Layer):
         self.offset_kernel = self.add_weight(
             name='offset_kernel',
             shape=self.kernel_size + (
-            input_shape[-1], 3 * self.deformable_groups * self.kernel_size[0] * self.kernel_size[1]),
+                input_shape[-1], 3 * self.deformable_groups * self.kernel_size[0] * self.kernel_size[1]),
             initializer='zeros',
             trainable=True,
             dtype='float32')
@@ -63,9 +68,9 @@ class ASP(KL.Layer):
         self.ks = self.kernel_size[0] * self.kernel_size[1]
         self.ph, self.pw = (self.kernel_size[0] - 1) // 2, (self.kernel_size[1] - 1) // 2
         self.phw = tf.constant([self.ph, self.pw], dtype='int32')
-        self.patch_yx = tf.stack(
-            tf.meshgrid(tf.range(-self.phw[1], self.phw[1] + 1), tf.range(-self.phw[0], self.phw[0] + 1))[::-1],
-            axis=-1)
+        self.patch_yx = tf.stack(tf.meshgrid(tf.range(-self.phw[1], self.phw[1] + 1),
+                                             tf.range(-self.phw[0], self.phw[0] + 1))[::-1],
+                                 axis=-1)
         self.patch_yx = tf.reshape(self.patch_yx, [-1, 2])
         super(ASP, self).build(input_shape)
 
