@@ -12,7 +12,7 @@ from keras.models import Model
 from keras.optimizers import Adam
 from keras.layers import *
 from ASPCaps import ASPCaps, CapsuleLayer, CapsToScalars, ConvertToCaps, FlattenCaps
-from ASP import ASP
+from ASPConv import ASPConv
 import argparse
 from util import createPatches, report, random_sample, applyPCA
 
@@ -20,9 +20,9 @@ from util import createPatches, report, random_sample, applyPCA
 def creat_model_aspcaps(x_train, num_classes):
     img_rows, img_cols, num_dim = x_train.shape[1], x_train.shape[2], x_train.shape[3]
     input_layer = Input((img_rows, img_cols, num_dim))
-    layer_01 = ASP(filters=128, kernel_size=args.KS, dilation=args.DR_1, stride=1)(input_layer)
+    layer_01 = ASPConv(filters=128, kernel_size=args.KS, dilation=args.DR_1, stride=1)(input_layer)
     layer_02 = Conv2D(filters=128, kernel_size=(1, 1), strides=(2, 2), activation='relu', padding='same')(layer_01)
-    layer_03 = ASP(filters=256, kernel_size=args.KS, dilation=args.DR_1, stride=1)(layer_02)
+    layer_03 = ASPConv(filters=256, kernel_size=args.KS, dilation=args.DR_1, stride=1)(layer_02)
     layer_04 = Conv2D(filters=256, kernel_size=(1, 1), strides=(2, 2), activation='relu', padding='same')(layer_03)
     layer_05 = BatchNormalization(momentum=args.momentum)(layer_04)
     layer_06 = ConvertToCaps()(layer_05)
