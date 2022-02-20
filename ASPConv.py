@@ -7,7 +7,7 @@ import tensorflow as tf
 import keras.layers as KL
 
 
-class ASP(KL.Layer):
+class ASPConv(KL.Layer):
     def __init__(self, filters=128,
                  kernel_size=3,
                  stride=1,
