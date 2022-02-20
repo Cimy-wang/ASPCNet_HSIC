@@ -28,7 +28,7 @@ class ASPConv(KL.Layer):
         self.bias_initializer = bias_initializer
         self.kernel_regularizer = kernel_regularizer
         self.bias_regularizer = bias_regularizer
-        super(ASP, self).__init__(**kwargs)
+        super(ASPConv, self).__init__(**kwargs)
 
     def build(self, input_shape):
         self.kernel = self.add_weight(
