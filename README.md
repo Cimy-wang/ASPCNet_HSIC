@@ -8,7 +8,6 @@ Jinping Wang and Xiaojun Tan and Jianhuang Lai and Jun Li. ASPCNet: Deep adaptiv
 
 If you have any questions, please contact us. e-mail: jinping_wang@foxmail.com
 
-This project has been verified in 
 
 
 Requirements
