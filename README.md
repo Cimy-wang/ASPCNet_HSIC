@@ -4,7 +4,7 @@ We have relased the code of Adaptive Spatial Pattern Capsule Network (ASPCNet) a
 
 Please cite us if our project is helpful to you
 
-Jinping Wang and Xiaojun Tan and Jianhuang Lai and Jun Li. ASPCNet: Deep adaptive spatial pattern capsule network for hyperspectral image classification. Neurocomputing. 2022(486). 47-60.
+J. Wang, X. Tan, J. Lai, and J. Li. ASPCNet: Deep adaptive spatial pattern capsule network for hyperspectral image classification. Neurocomputing. 2022(486). 47-60.
 
 If you have any questions, please contact us. e-mail: jinping_wang@foxmail.com
 
