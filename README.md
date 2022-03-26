@@ -6,8 +6,7 @@ Please cite us if our project is helpful to you
 
 Jinping Wang and Xiaojun Tan and Jianhuang Lai and Jun Li. ASPCNet: Deep adaptive spatial pattern capsule network for hyperspectral image classification. Neurocomputing. 2022(486). 47-60.
 
-However, part of code in *util.py* and *ASPCaps.py* involves internal projects, so it has not been published. If you have any questions, please contact us. e-mail: jinping_wang@foxmail.com or wangjp29@mail2.sysu.edu.cn
-
+If you have any questions, please contact us. e-mail: jinping_wang@foxmail.com
 This project has been verified in 
 
 
