@@ -1,6 +1,6 @@
 # ASPCNet
 
-We have relased the code of Adaptive Spatial Pattern Capsule Network (ASPCNet) algorithm, And the paper has been submitted to *NEUROCOMPUTING*. 
+We have relased the code of Adaptive Spatial Pattern Capsule Network (ASPCNet) algorithm, And the paper has been submitted to [*NEUROCOMPUTING*](https://www.sciencedirect.com/science/article/pii/S092523122200220X). 
 
 Please cite us if our project is helpful to you
 
